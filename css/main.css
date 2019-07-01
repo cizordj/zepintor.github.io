@@ -1,0 +1,48 @@
+/* 
+    Created on : 20/06/2019, 16:57:47
+    Author     : cezar
+*/
+body{
+    background: url(http://localhost:8383/ZePintor/img/fundo.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+img {
+    width: 550px;
+    height: 400px;
+}
+
+.whatsapp-position {
+    position: fixed;
+    bottom:20px;
+    right: 40px;
+    z-index: 999;
+}
+.logo {
+    width: 55px;
+    height: 55px;
+}
+.main {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: aliceblue;
+    border-radius: 0.3rem;
+}
+
+@media (min-width: 576px) {
+    .main {
+        padding: 4rem 2rem;
+    }
+}
+.bg-custom {
+    background-color: #800000
+        !important; 
+}
+/* Maroon background*/
+a.bg-custom:hover, a.bg-custom:focus,
+button.bg-custom:hover,
+button.bg-custom:focus {
+    background-color: #dae0e5 !important;
+}
