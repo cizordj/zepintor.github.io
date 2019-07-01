@@ -3,7 +3,7 @@
     Author     : cezar
 */
 body{
-    background: url(http://localhost:8383/ZePintor/img/fundo.png) no-repeat center center fixed; 
+    background: url(https://raw.githubusercontent.com/zepintor/zepintor.github.io/master/img/fundo.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
