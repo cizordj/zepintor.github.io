@@ -46,3 +46,6 @@ button.bg-custom:hover,
 button.bg-custom:focus {
     background-color: #dae0e5 !important;
 }
+.emoji{
+    font-size: 50px;
+}
