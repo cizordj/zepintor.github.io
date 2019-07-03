@@ -24,20 +24,20 @@ img {
     width: 55px;
     height: 55px;
 }
-.main {
+.main-bg {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
-    background-color: aliceblue;
+    background-color: #1C2331;
     border-radius: 0.3rem;
 }
 
 @media (min-width: 576px) {
-    .main {
+    .main-bg {
         padding: 4rem 2rem;
     }
 }
 .bg-custom {
-    background-color: #800000
+    background-color: #6351ce
         !important; 
 }
 /* Maroon background*/
