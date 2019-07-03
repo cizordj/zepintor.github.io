@@ -28,6 +28,12 @@ img {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     background-color: #1C2331;
+    /*
+    #1C2331
+    Aquele cinza mais puxado pro azul
+    #311c1c
+    Aquele cinza mais puxado pro vermelho
+    */
     border-radius: 0.3rem;
 }
 
@@ -36,14 +42,27 @@ img {
         padding: 4rem 2rem;
     }
 }
-.bg-custom {
+
+.bg-maroon {
+    background-color: #7f0000
+        !important;
+}
+
+a.bg-maroon:hover, a.bg-maroon:focus,
+button.bg-maroon:hover,
+button.bg-maaroon:focus {
+    background-color: #f05545
+        !important;
+}
+
+.bg-purple {
     background-color: #6351ce
         !important; 
 }
-/* Maroon background*/
-a.bg-custom:hover, a.bg-custom:focus,
-button.bg-custom:hover,
-button.bg-custom:focus {
+
+a.bg-purple:hover, a.bg-purple:focus,
+button.bg-purple:hover,
+button.bg-purple:focus {
     background-color: #dae0e5 !important;
 }
 .emoji{
