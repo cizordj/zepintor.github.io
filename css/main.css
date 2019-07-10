@@ -24,11 +24,6 @@ img {
     width: 52px;
     height: 52px;
 }
-.wppContactPage {
-    width: 320px;
-    height: 72px;
-}
-    
 .main-bg {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
@@ -41,7 +36,6 @@ img {
     */
     border-radius: 0.3rem;
 }
-
 @media (min-width: 576px) {
     .main-bg {
         padding: 4rem 2rem;
@@ -70,6 +64,17 @@ button.bg-purple:hover,
 button.bg-purple:focus {
     background-color: #dae0e5 !important;
 }
+/*
+    Things available only in contact's page
+*/
+.wppContactPage {
+    width: 320px;
+    height: 72px;
+}
 .emoji{
     font-size: 50px;
+}
+.mail-icon{
+    width: 121px;
+    height: 84px;
 }
