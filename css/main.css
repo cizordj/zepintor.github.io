@@ -2,18 +2,37 @@
     Created on : 20/06/2019, 16:57:47
     Author     : cezar
 */
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 body{
-    background: url(https://zepintor.github.io/img/fundo.jpeg) no-repeat center center fixed; 
+    background: url(../img/fundo.jpeg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-img {
-    width: 550px;
-    height: 400px;
+
+main {
+    margin-bottom: 2rem;
+    margin-top: 6rem;
 }
 
+h1, h2, h3, h4, h5 ,h6 {
+    font-family: 'Quicksand', sans-serif;
+}
+.pictures {
+    margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .pictures {
+    width: 500px;
+  }
+}
+
+.img-highlight {
+    width: 8rem;
+    height: 6rem;
+}
 .whatsapp-position {
     position: fixed;
     bottom:20px;
@@ -77,4 +96,5 @@ button.bg-purple:focus {
 .mail-icon{
     width: 121px;
     height: 84px;
+    margin-bottom: 2rem;
 }

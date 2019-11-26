@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <title>Pinturas em Indaial | Zé Pintor</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Serviços de pinturas residenciais em Indaial e região, faça um orçamento sem compromisso">
-        <meta http-equiv="content language" content="pt-br">
+        <meta name="robots" content="ALL" />
+        <meta name="description" content="Serviços de pinturas residenciais em Indaial e vale do Itajaí, faça um orçamento sem compromisso">
         <meta name="author" content="Cézar Augusto">
         <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -14,7 +14,7 @@
         <link href="css/main.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <nav class="navbar navbar-expand-md bg-maroon navbar-dark fixed-top">
+        <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
             <a href="index.html" class="navbar-brand">Zé Pintor</a>
             <button class="navbar-toggler" data-toggle="collapse" type="button" data-target="#navigationBar">
                 <span class="navbar-toggler-icon"></span>
@@ -33,83 +33,69 @@
                 </ul>
             </div>
         </nav>
-
-
-        <br><br><br><br>
-
-        <main class="container main-bg text-center text-white">
-            <h1>Zé Pintor Indaial</h1><br>
-            <p>
-                Acabamento fino e rústico<br>
-                Grafiato<br>
-                Lavação e pintura de telhados<br>
-                Massa acrílica<br>
-                Massa corrida<br>
-                Massa protec<br>
-                Reformas de pintura<br>
-                Texturas<br>
-            </p>
-            <br>
-            <h3>Pintor autônomo que atende em Indaial e região do
-            vale do Itajaí</h3>
-            <br><br>
-
-            <a href="#deck">Decks de madeira</a>&nbsp;&nbsp;
-            <a href="#casa">Casa</a>&nbsp;&nbsp;
-            <a href="#telhado">Telhado</a>
+        <main class="container bg-dark text-center text-white">
+            <div style="marginbottom: 2rem;">
+            <h1>Zé Pintor Indaial</h1>
+            <p>Serviços de pinturas em geral | orçamento sem compromisso</p>
+            </div>
             
+            <div class="row bg-light text-dark" id="pontos_fortes">
+                <div class="col">
+                    <h4>Nota fiscal</h4>
+                    <img class="img-highlight" src="img/nfe.svg" alt="nfe"/><h1></h1>
+                </div>
+                <div class="col">
+                    <h4>Produtos de primeira</h4>
+                    <img class="img-highlight" src="img/varinha.svg" alt="varinha"/><h1></h1>
+                </div>
+                <div class="col">
+                    <h4>Garantia de 10 anos</h4>
+                    <img class="img-highlight" src="img/garantia.svg" alt="garantia"/><h1></h1>
+                </div>
+            </div>
             <br><br>
-
-            <img src="img/casaMadeira.png" alt="Uma casa de madeira pintada." class="img-fluid"/>
-            <p>Aqui uma casa pintada com o osmocolor nas beiradas</p>
-            <br>
-
-            <h1 id="deck">Acabamento em decks</h1>
-            <img src="img/deck0.jpg" alt="Um deck lixado" class="img-fluid"/>
-            <p>A reforma de um deck consiste em remover todo o verniz e depois aplicar o produto novo.</p>
-            <br>
-            <img src="img/deck3.jpg" alt="Todos os móveis de um deck lixados" class="img-fluid"/>
-            <p>Os móveis de madeira, do jeito que vieram ao mundo</p>
-            <br>
-            <img src="img/deck1.jpg" alt="Um deck de madeira lixado" class="img-fluid"/>
-            <p>O mesmo deck depois de pintado com Osmocolor</p>
-            <br>
-
-            <img src="img/deck2.jpg" alt="Móveis de madeira pintados em cima do deck" class="img-fluid"/>
-            <p>Não somente o deck, mas também todos os móveis de madeira.</p>
-            <br>
-            <img src="img/varanda1.jpg" alt="Fundo de uma varanda amadeirado" class="img-fluid"/>
-            <p>Esse é o teto de uma varanda pintado.</p>
-            <br>
-            <img src="img/teto_antes.jpg" alt="Um teto com a madeira toda descascada" class="img-fluid"/>
-            <p>Teto antes de lavar</p>
-            <br>
-            <img src="img/teto_depois.jpg" alt="Teto de madeira todo pintado" class="img-fluid"/>
-            <p>Depois de lavar</p>
-            <br><br>
-
-            <h1 id="casa">Pinturas em casas</h1>
-            <h3>Amarelo</h3>
-            <img src="img/casaPintada.jpg" alt="Uma casa pintada de amarela" class="img-fluid"/>
-            <br>
-            <img src="img/casaPintada1.jpg" alt="" class="img-fluid"/>
-            <br>
-            <img src="img/casaPintada2.jpg" alt="" class="img-fluid"/>
-            <br>
-            <img src="img/casaPintada3.jpg" alt="" class="img-fluid"/>
-            <br>
-            <img src="img/casaPintada4.jpg" alt="" class="img-fluid"/>
-            <br><br>
-            
-            <h1 id="telhado">Telhados</h1>
-            <img src="img/lavacaoTelhado.png" alt="Um homem sobre o telhado de uma casa" class="img-fluid"/>
-            <p>Parte de trás da casa</p>
-            <br>
-            <img src="img/lavacaoTelhado3.png" alt="Telhado limpo e branquinho" class="img-fluid"/>
-            <p>Depois</p>
-            <br>
-            <img src="img/lavacaoTelhado1.jpg" alt="Foto de telhado antes e depois" class="img-fluid"/>
-            <p>Treze horas de serviço</p>
+            <h1>Deques de madeira</h1>
+            <img class="pictures img-fluid border border-primary rounded-lg" src="img/deck0.jpg" alt="deck0"/>
+            <img class="pictures img-fluid border border-warning rounded-lg" src="img/deck1.jpg" alt="deck1"/>
+            <img class="pictures img-fluid border border-success rounded-lg" src="img/deck2.jpg" alt="deck2"/>
+            <img class="pictures img-fluid border border-danger rounded-lg" src="img/deck3.jpg" alt="deck3"/>
+            <h1>Aplicações de massa</h1>
+            <img class="pictures img-fluid border border-info rounded-lg" src="img/massa0.jpg" alt="massa0"/>
+            <img class="pictures img-fluid border border-danger rounded-lg" src="img/massa1.jpg" alt="massa1"/>
+            <img class="pictures img-fluid border border-warning rounded-lg" src="img/massa2.jpg" alt="massa1"/>
+            <img class="pictures img-fluid border border-secondary rounded-lg" src="img/massa3.jpg" alt="massa3"/>
+            <h1>Destaque amarelo na casa</h1>
+            <img class="pictures img-fluid border border-warning rounded-lg" src="img/casa_amarela0.jpg" alt="amarela0"/>
+            <img class="pictures img-fluid border border-danger rounded-lg" src="img/casa_amarela1.jpg" alt="amarela1"/>
+<img class="pictures img-fluid border border-success rounded-lg" src="img/casa_amarela2.jpg" alt="amarela2"/>
+<img class="pictures img-fluid border border-info rounded-lg" src="img/casa_amarela3.jpg" alt="amarela3"/>
+<h1>Lavação de telhados</h1>
+<img class="pictures img-fluid border border-info rounded-lg" src="img/lavacao_telhado0.jpg" alt="telhado0"/>
+<img class="pictures img-fluid border border-danger rounded-lg" src="img/lavacao_telhado1.jpg" alt="telhado1"/>
+<img class="pictures img-fluid border border-success rounded-lg" src="img/lavacao_telhado2.jpg" alt="telhado2"/>
+<h1>Pintura em telhados</h1>
+<img class="pictures img-fluid border border-info rounded-lg" src="img/pintura_telhado0.jpg" alt="Telhado pintado"/>
+<img class="pictures img-fluid border border-warning rounded-lg" src="img/pintura_telhado1.jpg" alt="Telhado pintado"/>
+<h1>Verniz em móveis</h1>
+<img class="pictures img-fluid border border-warning rounded-lg" src="img/verniz0.jpg" alt="verniz0"/>
+<img class="pictures img-fluid border border-primary rounded-lg" src="img/verniz1.jpg" alt="verniz1"/>
+<img class="pictures img-fluid border border-secondary rounded-lg" src="img/verniz2.jpg" alt="verniz2"/>
+<img class="pictures img-fluid border border-info rounded-lg" src="img/verniz3.jpg" alt="verniz3"/>
+<h1>Casas de madeira</h1>
+<img class="pictures img-fluid border border-info rounded-lg" src="img/casa_madeira0.jpg" alt="casa_madeira0"/>
+<img class="pictures img-fluid border border-warning rounded-lg" src="img/casa_madeira1.jpg" alt="casa_madeira1"/>
+<img class="pictures img-fluid border border-success rounded-lg" src="img/casa_madeira2.jpg" alt="casa_madeira2"/>
+<img class="pictures img-fluid border border-danger rounded-lg" src="img/casa_madeira3.jpg" alt="casa_madeira3"/>
+<img class="pictures img-fluid border border-secondary rounded-lg" src="img/casa_madeira4.jpg" alt="casa_madeira4"/>
+<h1>Pintura em prédio</h1>
+<img class="pictures img-fluid border border-secondary rounded-lg" src="img/predio0.jpg" alt="Prédio"/>
+<img class="pictures img-fluid border border-warning rounded-lg" src="img/predio1.jpg" alt="Prédio"/>
+<h1>Pintura em gesso</h1>
+<img class="pictures img-fluid border border-warning rounded-lg" src="img/gesso0.jpg" alt="Gesso"/>
+<img class="pictures img-fluid border border-warning rounded-lg" src="img/gesso1.jpg" alt="Gesso"/>
+<h1>Acabamento fino</h1>
+<img class="pictures img-fluid border border-success rounded-lg" src="img/acabamento_fino0.jpg" alt="Acabamento"/>
+<img class="pictures img-fluid border border-danger rounded-lg" src="img/acabamento_fino1.jpg" alt="Acabamento"/>
         </main>
 
         <div class="whatsapp-position">
