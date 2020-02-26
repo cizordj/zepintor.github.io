@@ -1,0 +1,10 @@
+<form method="POST" action="https://formspree.io/mdozalpk" id="formulary">
+<input name="Nome" type="text" data-role="input" data-prepend="Nome">
+<br>
+<input name="Email" type="text" data-role="input" data-prepend="Email">
+<br>
+<input name="telefone" type="text" data-role="input" data-prepend="Telefone">
+<br>
+<textarea name="mensagem" data-role="textarea" data-auto-size="false" placeholder="Sua mensagem..."></textarea>
+<br>
+</form>
