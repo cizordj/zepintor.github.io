@@ -3,6 +3,7 @@ function openInNewTab(url) {
 }
 function openFormulary() {
     var path = "/partials/form.txt";
+    location.hash = +1;
     $.get(path).then(
             function (response) {
                 displayDialog(response);
@@ -16,14 +17,14 @@ function displayDialog(formulary) {
         actions: [
             {
                 caption: "Cancelar",
-                cls: "js-dialog-close light",
+                cls: "js-dialog-close default",
                 onclick: function () {
                     console.log("Formulário de orçamento fechado");
                 }
             },
             {
                 caption: "Enviar",
-                cls: "js-dialog-close",
+                cls: "js-dialog-close light",
                 onclick: function () {
                     submitRequest();
                 }
