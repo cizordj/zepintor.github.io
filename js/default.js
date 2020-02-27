@@ -2,7 +2,7 @@ function openInNewTab(url) {
     window.location = url;
 }
 function openFormulary() {
-    var path = "./partials/form.txt";
+    var path = "/partials/form.txt";
     $.get(path).then(
             function (response) {
                 displayDialog(response);
