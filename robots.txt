@@ -5,3 +5,4 @@ Disallow: /css
 Disallow: /js
 Disallow: /mif
 Disallow: /partials
+Sitemap: https://zepintor.github.io/sitemap.xml
