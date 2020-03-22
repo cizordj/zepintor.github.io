@@ -12,6 +12,7 @@ function home(){
 function services(){
     document.title = "Zé Pintor | Serviços";
     loadPage("/partials/services.html");
+    window.scrollTo(0,0);
 }
 function about(){
     document.title = "Zé Pintor | Sobre";
