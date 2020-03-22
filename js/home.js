@@ -7,20 +7,24 @@ function loadPage(url){
 }
 function home(){
     document.title = "Pinturas em Indaial | Zé Pintor";
-    loadPage("/partials/home.html");
+    loadPage("partials/home.html");    
+    window.scrollTo(0,0);
 }
 function services(){
     document.title = "Zé Pintor | Serviços";
-    loadPage("/partials/services.html");
+    loadPage("partials/services.html");
     window.scrollTo(0,0);
 }
 function about(){
     document.title = "Zé Pintor | Sobre";
-    loadPage("/partials/about.html");
+    loadPage("partials/about.html");
+    window.scrollTo(0,0);
 }
 function contact(){
     document.title = "Zé Pintor | Contato";
-    loadPage("/partials/contact.html");
+    loadPage("partials/contact.html");
+    window.scrollTo(0,0);
+
 }
 function whatsapp(){
     var url = "https://wa.me/5547991673021";
