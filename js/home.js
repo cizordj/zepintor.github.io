@@ -7,6 +7,7 @@ function loadPage(url){
 }
 function home(){
     document.title = "Pinturas em Indaial | Zé Pintor";
+    history.replaceState(null, null, ' ');
     loadPage("partials/home.html");    
     window.scrollTo(0,0);
     restoreButton();
@@ -22,18 +23,21 @@ function restoreButton(){
 }
 function services(){
     document.title = "Zé Pintor | Serviços";
+    window.location.hash = "servicos";
     loadPage("partials/services.html");
     window.scrollTo(0,0);
     restoreButton();
 }
 function about(){
     document.title = "Zé Pintor | Sobre";
+    window.location.hash = "sobre";
     loadPage("partials/about.html");
     window.scrollTo(0,0);
     restoreButton();
 }
 function contact(){
     document.title = "Zé Pintor | Contato";
+    window.location.hash = "contato";
     loadPage("partials/contact.html");
     window.scrollTo(0,0);
     document.getElementById("left-button-icon").classList.remove('mif-news');
