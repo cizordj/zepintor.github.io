@@ -16,12 +16,11 @@
     <title>Pinturas em Indaial | Zé Pintor</title>
     <link rel="shortcut icon" type="image/png" href="./favicon.png" />
     <link href="css/metro-all.min.css" rel="stylesheet" type="text/css"/>
-    <link href="css/schemes/used-scheme.min.css" rel="stylesheet" type="text/css"/>
     <link rel="canonical" href="https://zepintor.github.io/" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <nav data-role="appbar" data-expand-point="md">
+    <nav data-role="appbar" data-expand-point="md" class="bg-darkCrimson fg-white">
       <a href="./" class="brand no-hover">
         <h4>Zé Pintor</h4>
       </a>
@@ -35,15 +34,14 @@
 
     <main></main>
 
-    <button onclick="whatsapp();" class="action-button success pos-fixed pos-bottom-right mb-6 mr-6 ani-horizontal no-visible visible-md">
-      <span class="icon"><img class="mb-6" src="assets/whatsapp-32.png" alt="whatsapp icon"></span>
-    </button>
+    <button onclick="whatsapp();" class="action-button success pos-fixed pos-bottom-right mb-6 mr-6 ani-horizontal no-visible visible-md"><span class="icon"><img class="mb-6" src="assets/whatsapp-32.png" alt="whatsapp icon"></span></button>
+
     <div class="bottom-nav pos-fixed no-visible-md visible-sm">
-      <button id="left-button" class="button">
+      <button id="left-button" class="button bg-darkCrimson fg-white">
         <span id="left-button-icon" class="icon"></span>
         <span id="left-button-text" class="label"></span>
       </button>
-      <button class="button" onclick="whatsapp();">
+      <button class="button bg-darkCrimson fg-white" onclick="whatsapp();">
         <span class="icon mif-phone"></span>
         <span class="label">WhatsApp</span>
       </button>
