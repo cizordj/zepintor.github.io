@@ -1,7 +1,7 @@
 function loadPage(url){
     $.get(url).then(
         function(response){
-            document.getElementById("main").innerHTML = response;
+            $("main").html(response);
         }
     );
 }
