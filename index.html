@@ -25,10 +25,10 @@
         <h4>Zé Pintor</h4>
       </a>
       <ul class="app-bar-menu">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#services">Serviços</a></li>
-        <li><a href="#contact">Contato</a></li>
-        <li><a href="#about">Sobre</a></li>
+        <li><a href="javascript:home();">Início</a></li>
+        <li><a href="javascript:services();">Serviços</a></li>
+        <li><a href="javascript:contact();">Contato</a></li>
+        <li><a href="javascript:about();">Sobre</a></li>
       </ul>
     </nav>
 
@@ -48,13 +48,6 @@
     </div>
     <script src="js/metro.min.js" type="text/javascript"></script>
     <script src="js/home.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      window.onhashchange = function(){
-        var page = location.hash.substr(1);
-        var execute = "javascript:"+page+"();";
-        window.location = execute;
-      }
-      window.onload = home();
-    </script>
+    <script type="text/javascript">home();</script>
   </body>
 </html>
