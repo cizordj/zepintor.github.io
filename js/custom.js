@@ -1,7 +1,8 @@
 function changePage(){
     var hash = window.location.hash.substring(1);
     var a=new Function(hash+"();");
-    a.apply(null)
+    $(".hamburger").fire('click');
+    a.apply(null);
 }
 function loadPage(url){
     $.get(url).then(
