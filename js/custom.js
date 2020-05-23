@@ -1,41 +1,47 @@
+function changePage(){
+    var hash = window.location.hash.substring(1);
+    var a=new Function(hash+"();");
+    a.apply(null)
+}
 function loadPage(url){
     $.get(url).then(
         function(response){
             $("main").html(response);
+            doAnimations();
+            window.scrollTo(0,0);
         }
     );
 }
 function home(){
     document.title = "Pinturas em Indaial | Zé Pintor";
-    loadPage("partials/home.html");    
-    window.scrollTo(0,0);
-    restoreButton();
+    loadPage("partials/home.html");
+    resetBottomBar();
 }
-function restoreButton(){
+function resetBottomBar(){
     document.getElementById("left-button").onclick = function(){
-    contact();
+        contact();
     };
     document.getElementById('left-button-icon').className = '';
     document.getElementById("left-button-icon").classList.add('icon');
     document.getElementById("left-button-icon").classList.add('mif-news');
     document.getElementById("left-button-text").innerHTML = "Solicitar orçamento";
 }
+function doAnimations(){
+    $('.fadein').fadeIn();
+}
 function services(){
     document.title = "Zé Pintor | Serviços";
     loadPage("partials/services.html");
-    window.scrollTo(0,0);
-    restoreButton();
+    resetBottomBar();
 }
 function about(){
     document.title = "Zé Pintor | Sobre";
     loadPage("partials/about.html");
-    window.scrollTo(0,0);
-    restoreButton();
+    resetBottomBar();
 }
 function contact(){
     document.title = "Zé Pintor | Contato";
     loadPage("partials/contact.html");
-    window.scrollTo(0,0);
     document.getElementById("left-button-icon").classList.remove('mif-news');
     document.getElementById("left-button-icon").classList.add('mif-chevron-thin-up');
     document.getElementById("left-button-text").innerHTML="Enviar Orçamento";
