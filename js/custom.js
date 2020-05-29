@@ -32,9 +32,24 @@ function resetBottomBar(){
 function doAnimations(){
     $('.fadein').fadeIn();
 }
-function services(){
-    document.title = "Zé Pintor | Serviços";
-    loadPage("partials/services.html");
+function wood(){
+    document.title = "Zé Pintor | Madeira";
+    loadPage("partials/wood.html");
+    resetBottomBar();
+}
+function paintings(){
+    document.title = "Zé Pintor | Pinturas";
+    loadPage("partials/paintings.html");
+    resetBottomBar();
+}
+function roof(){
+    document.title = "Zé Pintor | Telhado";
+    loadPage('partials/roof.html');
+    resetBottomBar();
+}
+function plaster(){
+    document.title = "Zé Pintor | Gesso";
+    loadPage('partials/plaster.html');
     resetBottomBar();
 }
 function about(){
@@ -55,6 +70,12 @@ function contact(){
 function whatsapp(){
     var url = "https://wa.me/5547991673021";
     window.open(url, '_blank');
+}
+function randomPage(){
+    var pages = ["wood", "paintings", "roof", "plaster"];
+    var index = Math.floor(Math.random() * 4);
+    var hash = pages[index];
+    window.location.hash = hash;
 }
 function submitRequest() {
     var method = document.getElementById("formulary").method;
