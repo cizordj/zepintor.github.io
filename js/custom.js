@@ -1,3 +1,13 @@
+function init(){
+    $(window).on('hashchange', function(){
+        changePage();
+    });
+    if (window.location.hash){
+        changePage();
+    } else {
+        window.location.hash='home';
+    }
+}
 function changePage(){
     if ($('button').hasClass('active')){
         console.log('button has true value, that is, it is active');
