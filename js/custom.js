@@ -1,6 +1,5 @@
 function changePage(){
     if ($('button').hasClass('active')){
-        console.log('button has true value, that is, it is active');
         $(".hamburger").fire('click');
     }
     var hash = window.location.hash.substring(1);
@@ -11,8 +10,8 @@ function loadPage(url){
     $.get(url).then(
         function(response){
             $("main").html(response);
-            doAnimations();
             window.scrollTo(0,0);
+            doAnimations();
         }
     );
 }
@@ -87,8 +86,8 @@ function submitRequest(){
     }).then(
         function(response){
             Metro.infobox.create("<h1>Pedido enviado com sucesso!</h1><p>A sua solicitação foi efetuada com sucesso, assim que pudermos retornaremos o mais breve possível.</p>", "success");
-            window.location.hash="home";
             form.reset();
+            window.location.hash="home";
         },
         function(xhr){
             Metro.infobox.create("<h1>Opss...</h1><p>Alguma coisa deu errada, verifique se você não enviou um formulário vazio ;)</p>", "bg-darkCrimson fg-white");
