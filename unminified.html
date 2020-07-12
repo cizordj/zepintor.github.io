@@ -94,19 +94,20 @@ main{
         a.apply(null);
       }
       function loadPage(url){
-        $.get(url).then(
-          function(response){
-            $("main").html(response);
-            window.scrollTo(0,0);
-            doAnimations();
-          }
-        );
+        $.get(url).then(function(response){
+          $('main').html(response);
+          makeAnimations();
+        });
       }
       function loadRandomPage(){
         var pages = ["wood", "paintings", "roof", "plaster"];
         var index = Math.floor(Math.random() * 4);
         var hash = pages[index];
         window.location.hash = hash;
+      }
+      function makeAnimations(){
+        $('.fadein').fadeIn();
+        window.scrollTo(0,0);
       }
       function home(){
         document.title = "Pinturas em Indaial | Zé Pintor";
@@ -120,9 +121,6 @@ main{
         $('#left-button-icon').clearClasses();
         $('#left-button-icon').addClass('icon mif-news');
         $('#left-button-text').innerText('Solicitar orçamento');
-      }
-      function doAnimations(){
-        $('.fadein').fadeIn();
       }
       function wood(){
         document.title = "Zé Pintor | Madeira";
@@ -181,7 +179,7 @@ main{
           }
         );
       }
-      (function(){
+      $(function(){
         $(window).on('hashchange', function(){
           changePage();
         });
@@ -190,7 +188,7 @@ main{
         } else {
           window.location.hash='home';
         }
-      })();
+      });
     </script>
   </body>
 </html>
