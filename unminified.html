@@ -16,9 +16,9 @@
     <meta name="google-site-verification" content="0WwKyjdYoo9BN9cgYGMGjofsWihyro1ajCmnVxXFGpI" />
     <title>Pinturas em Indaial | Zé Pintor</title>
     <link rel="canonical" href="https://zepintor.github.io/" />
-    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.7/css/metro.min.css">
-    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.7/css/metro-colors.min.css">
-    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.7/css/metro-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.9/css/metro.min.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.9/css/metro-colors.min.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.9/css/metro-icons.min.css">
     <style>
 main{
   margin-top:52px;
@@ -38,13 +38,18 @@ main{
 .dropdown-toggle::before{
   border-color: #ffffff;
 }
+.ani-horizontal,
+.ani-hover-horizontal:hover {
+  -webkit-animation: ani-horizontal 2s ease infinite;
+          animation: ani-horizontal 2s ease infinite;
+}
     </style>
   </head>
   <body>
     <div class="container-fluid bg-darkCrimson pos-fixed fixed-top z-top">
       <nav data-role="appbar" data-expand-point="md" class="container fg-white bg-transparent pos-relative">
         <a href="./" class="brand no-hover">
-          <h3 class="text-light">Zé Pintor</h3>
+          <span class="text-leader">Zé Pintor</span>
         </a>
         <ul class="app-bar-menu ml-auto">
           <li><a href="#home">Início</a></li>
@@ -83,7 +88,7 @@ main{
       </button>
     </div>
     <button onclick="whatsapp();" class="action-button success pos-fixed pos-bottom-right mb-6 mr-6 ani-horizontal no-visible visible-md"><span class="icon mif-whatsapp"></span></button>
-    <script src="https://cdn.metroui.org.ua/v4.3.7/js/metro.min.js"></script>
+    <script src="https://cdn.metroui.org.ua/v4.3.9/js/metro.min.js"></script>
     <script>
       function changePage(){
         if ($('button').hasClass('active')){
