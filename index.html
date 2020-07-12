@@ -1,1 +1,199 @@
-<!DOCTYPE html><html lang="pt-br"><head><meta charset="utf-8"> <noscript><meta http-equiv="refresh" content="0; url=no-js.html" /></noscript><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta property="og:url" content="https://zepintor.github.io/"><meta property="og:title" content="Pinturas em Indaial | Zé Pintor"><meta property="og:description" content="Serviço de pinturas residenciais em Indaial e vale do Itajaí, com ótimas referências."><meta property="og:type" content="website"><meta property="og:locale" content="pt_BR" /><meta name="author" content="Cézar Augusto"><meta name="description" content="Serviço de pinturas residenciais em Indaial e vale do Itajaí, com ótimas referências."><meta name="keywords" content="pinturas em Indaial, pintor em Indaial, serviço de pinturas, pintura de casa, Indaial, Vale do Itajaí"><meta name="google-site-verification" content="0WwKyjdYoo9BN9cgYGMGjofsWihyro1ajCmnVxXFGpI" /><title>Pinturas em Indaial | Zé Pintor</title><link rel="canonical" href="https://zepintor.github.io/" /><link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.9/css/metro.min.css"><link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.9/css/metro-colors.min.css"><link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.9/css/metro-icons.min.css"><style>main{margin-top:52px}.bg-transparent{background-color:transparent !important}.reception{height:400px;background-color:#ccc;background-image:linear-gradient(#560014,#a20025)}.z-top{z-index:1080 !important}.fadein{display:none}.dropdown-toggle::before{border-color:#fff}.ani-horizontal,.ani-hover-horizontal:hover{-webkit-animation:ani-horizontal 2s ease infinite;animation:ani-horizontal 2s ease infinite}</style></head><body><div class="container-fluid bg-darkCrimson pos-fixed fixed-top z-top"> <nav data-role="appbar" data-expand-point="md" class="container fg-white bg-transparent pos-relative"> <a href="./" class="brand no-hover"> <span class="text-leader">Zé Pintor</span> </a><ul class="app-bar-menu ml-auto"><li><a href="#home">Início</a></li><li> <a href="#" class="dropdown-toggle">Serviços</a><ul class="d-menu" data-role="dropdown"><li><a href="#wood">Madeira</a></li><li><a href="#paintings">Pinturas</a></li><li><a href="#roof">Telhado</a></li><li><a href="#plaster">Gesso</a></li></ul></li><li><a href="#contact">Contato</a></li><li><a href="#about">Sobre</a></li></ul> </nav></div><main></main><footer class="bg-dark fg-gray p-1 no-visible visible-md text-center"><ul class="inline-list"><li><a href="https://github.com/cizordj"><img alt="Author" src="https://img.shields.io/badge/Autor-C%C3%A9zar%20Augusto-success?style=flat-square&logo=github&color=informational"></a></li><li><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/zepintor/zepintor.github.io?label=%C3%9Altima%20atualiza%C3%A7%C3%A3o&style=flat-square"></li><li><a href="https://github.com/zepintor/zepintor.github.io" target="_blank"><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/zepintor/zepintor.github.io?label=C%C3%B3digo-fonte&logo=github&style=flat-square"></a></li></ul> </footer><div class="bottom-nav no-visible-md visible-sm"> <button id="left-button" class="button bg-darkCrimson fg-white"> <span id="left-button-icon" class="icon"></span> <span id="left-button-text" class="label"></span> </button> <button class="button bg-darkCrimson fg-white" onclick="whatsapp();"> <span class="icon mif-whatsapp"></span> <span class="label">WhatsApp</span> </button></div> <button onclick="whatsapp();" class="action-button success pos-fixed pos-bottom-right mb-6 mr-6 ani-horizontal no-visible visible-md"><span class="icon mif-whatsapp"></span></button> <script src="https://cdn.metroui.org.ua/v4.3.9/js/metro.min.js"></script> <script>function changePage(){if($('button').hasClass('active')){$(".hamburger").fire('click');} var hash=window.location.hash.substring(1);var a=new Function(hash+"();");a.apply(null);} unction loadPage(url){$.get(url).then(function(response){$('main').html(response);makeAnimations();});} function loadRandomPage(){var pages=["wood","paintings","roof","plaster"];var index=Math.floor(Math.random()*4);var hash=pages[index];window.location.hash=hash;} function makeAnimations(){$('.fadein').fadeIn();window.scrollTo(0,0);} function home(){document.title="Pinturas em Indaial | Zé Pintor";loadPage("partials/home.html");resetBottomBar();} function resetBottomBar(){$('#left-button').on('click',function(e){window.location.hash="contact";});$('#left-button-icon').clearClasses();$('#left-button-icon').addClass('icon mif-news');$('#left-button-text').innerText('Solicitar orçamento');} function wood(){document.title="Zé Pintor | Madeira";loadPage("partials/wood.html");resetBottomBar();} function paintings(){document.title="Zé Pintor | Pinturas";loadPage("partials/paintings.html");resetBottomBar();} function roof(){document.title="Zé Pintor | Telhado";loadPage('partials/roof.html');resetBottomBar();} function plaster(){document.title="Zé Pintor | Gesso";loadPage('partials/plaster.html');resetBottomBar();} function about(){document.title="Zé Pintor | Sobre";loadPage("partials/about.html");resetBottomBar();} function contact(){document.title="Zé Pintor | Contato";loadPage("partials/contact.html");$('#left-button-icon').removeClass('mif-news');$('#left-button-icon').addClass('mif-chevron-thin-up');$('#left-button-text').innerText('Enviar pedido');$('#left-button').on('click',function(e){submitRequest();});} function whatsapp(){var url="https://wa.me/5547991673021";window.open(url,'_blank');} function submitRequest(){var form=document.getElementById('formulary');var headers={Accept:'application/json'};$.ajax({url:form.action,method:form.method,data:form,headers:headers}).then(function(response){Metro.infobox.create("<h1>Pedido enviado com sucesso!</h1><p>A sua solicitação foi efetuada com sucesso, assim que pudermos retornaremos o mais breve possível.</p>","success");form.reset();window.location.hash="home";},function(xhr){Metro.infobox.create("<h1>Opss...</h1><p>Alguma coisa deu errada, verifique se você não enviou um formulário vazio ;)</p>","bg-darkCrimson fg-white");});} $(function(){$(window).on('hashchange',function(){changePage();});if(window.location.hash){changePage();}else{window.location.hash='home';}});</script> </body></html>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <noscript><meta http-equiv="refresh" content="0; url=no-js.html" /></noscript>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:url" content="https://zepintor.github.io/">
+    <meta property="og:title" content="Pinturas em Indaial | Zé Pintor">
+    <meta property="og:description" content="Serviço de pinturas residenciais em Indaial e vale do Itajaí, com ótimas referências.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="author" content="Cézar Augusto">
+    <meta name="description" content="Serviço de pinturas residenciais em Indaial e vale do Itajaí, com ótimas referências.">
+    <meta name="keywords" content="pinturas em Indaial, pintor em Indaial, serviço de pinturas, pintura de casa, Indaial, Vale do Itajaí">
+    <meta name="google-site-verification" content="0WwKyjdYoo9BN9cgYGMGjofsWihyro1ajCmnVxXFGpI" />
+    <title>Pinturas em Indaial | Zé Pintor</title>
+    <link rel="canonical" href="https://zepintor.github.io/" />
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.9/css/metro.min.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.9/css/metro-colors.min.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.9/css/metro-icons.min.css">
+    <style>
+main{
+  margin-top:52px;
+}
+.bg-transparent{ 
+  background-color: transparent !important; 
+}
+.reception{ 
+  height: 400px; background-color: #cccccc; background-image: linear-gradient(#560014, #a20025); 
+}
+.z-top{
+  z-index: 1080 !important; 
+} 
+.fadein{ 
+  display:none;
+} 
+.dropdown-toggle::before{
+  border-color: #ffffff;
+}
+.ani-horizontal,
+.ani-hover-horizontal:hover {
+  -webkit-animation: ani-horizontal 2s ease infinite;
+          animation: ani-horizontal 2s ease infinite;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid bg-darkCrimson pos-fixed fixed-top z-top">
+      <nav data-role="appbar" data-expand-point="md" class="container fg-white bg-transparent pos-relative">
+        <a href="./" class="brand no-hover">
+          <span class="text-leader">Zé Pintor</span>
+        </a>
+        <ul class="app-bar-menu ml-auto">
+          <li><a href="#home">Início</a></li>
+          <li>
+            <a href="#" class="dropdown-toggle">Serviços</a>
+            <ul class="d-menu" data-role="dropdown">
+              <li><a href="#wood">Madeira</a></li>
+              <li><a href="#paintings">Pinturas</a></li>
+              <li><a href="#roof">Telhado</a></li>
+              <li><a href="#plaster">Gesso</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a href="#about">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main></main>
+
+    <footer class="bg-dark fg-gray p-1 no-visible visible-md text-center">
+      <ul class="inline-list">
+        <li><a href="https://github.com/cizordj"><img alt="Author" src="https://img.shields.io/badge/Autor-C%C3%A9zar%20Augusto-success?style=flat-square&logo=github&color=informational"></a></li>
+        <li><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/zepintor/zepintor.github.io?label=%C3%9Altima%20atualiza%C3%A7%C3%A3o&style=flat-square"></li>
+        <li><a href="https://github.com/zepintor/zepintor.github.io" target="_blank"><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/zepintor/zepintor.github.io?label=C%C3%B3digo-fonte&logo=github&style=flat-square"></a></li>
+      </ul>
+    </footer>
+    <div class="bottom-nav no-visible-md visible-sm">
+      <button id="left-button" class="button bg-darkCrimson fg-white">
+        <span id="left-button-icon" class="icon"></span>
+        <span id="left-button-text" class="label"></span>
+      </button>
+      <button class="button bg-darkCrimson fg-white" onclick="whatsapp();">
+        <span class="icon mif-whatsapp"></span>
+        <span class="label">WhatsApp</span>
+      </button>
+    </div>
+    <button onclick="whatsapp();" class="action-button success pos-fixed pos-bottom-right mb-6 mr-6 ani-horizontal no-visible visible-md"><span class="icon mif-whatsapp"></span></button>
+    <script src="https://cdn.metroui.org.ua/v4.3.9/js/metro.min.js"></script>
+    <script>
+      function changePage(){
+        if ($('button').hasClass('active')){
+          $(".hamburger").fire('click');
+        }
+        var hash = window.location.hash.substring(1);
+        var a=new Function(hash+"();");
+        a.apply(null);
+      }
+      function loadPage(url){
+        $.get(url).then(function(response){
+          $('main').html(response);
+          makeAnimations();
+        });
+      }
+      function loadRandomPage(){
+        var pages = ["wood", "paintings", "roof", "plaster"];
+        var index = Math.floor(Math.random() * 4);
+        var hash = pages[index];
+        window.location.hash = hash;
+      }
+      function makeAnimations(){
+        $('.fadein').fadeIn();
+        window.scrollTo(0,0);
+      }
+      function home(){
+        document.title = "Pinturas em Indaial | Zé Pintor";
+        loadPage("partials/home.html");
+        resetBottomBar();
+      }
+      function resetBottomBar(){
+        $('#left-button').on('click', function(e){
+          window.location.hash = "contact";
+        });
+        $('#left-button-icon').clearClasses();
+        $('#left-button-icon').addClass('icon mif-news');
+        $('#left-button-text').innerText('Solicitar orçamento');
+      }
+      function wood(){
+        document.title = "Zé Pintor | Madeira";
+        loadPage("partials/wood.html");
+        resetBottomBar();
+      }
+      function paintings(){
+        document.title = "Zé Pintor | Pinturas";
+        loadPage("partials/paintings.html");
+        resetBottomBar();
+      }
+      function roof(){
+        document.title = "Zé Pintor | Telhado";
+        loadPage('partials/roof.html');
+        resetBottomBar();
+      }
+      function plaster(){
+        document.title = "Zé Pintor | Gesso";
+        loadPage('partials/plaster.html');
+        resetBottomBar();
+      }
+      function about(){
+        document.title = "Zé Pintor | Sobre";
+        loadPage("partials/about.html");
+        resetBottomBar();
+      }
+      function contact(){
+        document.title = "Zé Pintor | Contato";
+        loadPage("partials/contact.html");
+        $('#left-button-icon').removeClass('mif-news');
+        $('#left-button-icon').addClass('mif-chevron-thin-up');
+        $('#left-button-text').innerText('Enviar pedido');
+        $('#left-button').on('click', function(e){
+          submitRequest();
+        });
+      }
+      function whatsapp(){
+        var url = "https://wa.me/5547991673021";
+        window.open(url, '_blank');
+      }
+      function submitRequest(){
+        var form = document.getElementById('formulary');
+        var headers = { Accept: 'application/json' };
+        $.ajax({url: form.action,
+          method: form.method,
+          data: form,
+          headers: headers
+        }).then(
+          function(response){
+            Metro.infobox.create("<h1>Pedido enviado com sucesso!</h1><p>A sua solicitação foi efetuada com sucesso, assim que pudermos retornaremos o mais breve possível.</p>", "success");
+            form.reset();
+            window.location.hash="home";
+          },
+          function(xhr){
+            Metro.infobox.create("<h1>Opss...</h1><p>Alguma coisa deu errada, verifique se você não enviou um formulário vazio ;)</p>", "bg-darkCrimson fg-white");
+          }
+        );
+      }
+      $(function(){
+        $(window).on('hashchange', function(){
+          changePage();
+        });
+        if (window.location.hash){
+          changePage();
+        } else {
+          window.location.hash='home';
+        }
+      });
+    </script>
+  </body>
+</html>
