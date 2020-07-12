@@ -1,1 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap'); main{ margin-top:52px; } h1,h2,h3,h4,h5,h6{ font-family:'Quicksand',sans-serif; } .bg-transparent{ background-color: transparent !important; } .reception{ height: 400px; background-color: #cccccc; background-image: linear-gradient(#560014, #a20025); } .z-top{ z-index: 1080 !important; } .fadein{ display:none; } .dropdown-toggle::before{ border-color: #ffffff; }
+main{
+    margin-top:52px;
+}
+h1,h2,h3,h4,h5,h6{ 
+    font-family:'Quicksand',sans-serif;
+}
+.bg-transparent{ 
+    background-color: transparent !important; 
+}
+.reception{ 
+    height: 400px; background-color: #cccccc; background-image: linear-gradient(#560014, #a20025); 
+}
+.z-top{
+    z-index: 1080 !important; 
+} 
+.fadein{ 
+    display:none;
+} 
+.dropdown-toggle::before{
+    border-color: #ffffff;
+}
