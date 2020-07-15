@@ -6,8 +6,8 @@
 <div class="container mt-6 mb-6 text-center fadein">
 	<form method=POST action=https://formspree.io/mdozalpk id=formulary>
 		<input name=Nome data-role=input data-prepend=Nome class=mb-6>
-		<input name=Email data-role=input data-prepend=Email class=mb-6>
-		<input name=telefone data-role=input data-prepend=Telefone class=mb-6>
+		<input name=Email data-role=input data-prepend=Email class=mb-6 type="email">
+		<input name=telefone data-role=input data-prepend=Telefone class=mb-6 type="tel">
 		<textarea name=mensagem data-role=textarea data-auto-size=false placeholder="Sua mensagem..." class=mb-6></textarea>
 	</form>
 	<button class="button large outline dark drop-shadow" onclick=submitRequest()>Enviar</button>
