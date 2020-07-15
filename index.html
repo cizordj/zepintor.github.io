@@ -94,9 +94,8 @@ main{
         if ($('button').hasClass('active')){
           $(".hamburger").fire('click');
         }
-        var hash = window.location.hash.substring(1);
-        var a=new Function(hash+"();");
-        a.apply(null);
+        var page = window.location.hash.substring(1);
+        Metro.utils.exec(page);
       }
       function loadPage(url){
         $.get(url).then(function(response){
