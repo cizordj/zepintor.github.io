@@ -5,8 +5,13 @@ function listFile(){
     find $PWD -name "*.html" 
 }
 
+function unminifyHtml(){
+    sed 's/> </>\n</g'
+    sed 's/></>\n</g'
+}
+
 for file in $(listFile); do
-    htmlmin $file > temp.file
+    htmlmin --keep-optional-attribute-quotes --remove-all-empty-space $file > temp.file
     rm $file
     mv temp.file $file
 done
