@@ -42,7 +42,7 @@ function unminifyEverything(){
     done
 }
 function minifyEverything(){
-    for file in $(listFile); do
+    for file in $(findEverything); do
         htmlmin --keep-optional-attribute-quotes --remove-all-empty-space "$file" > temp.file
         rm "$file"
         mv temp.file "$file"
