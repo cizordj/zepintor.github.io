@@ -1,6 +1,6 @@
 @media only screen and (min-width: 576px) {
     body {
-        background: url("/img/fundo-min.jpg") no-repeat center center fixed; 
+        background: url("/img/fundo.png") no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -9,10 +9,7 @@
 }
 @media only screen and (max-width: 576px){
     body {
-        background: url("/img/fundo_celular.png") no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        background: url("/img/fundo_celular.png") no-repeat center;
         background-size: cover;
     }
 }
