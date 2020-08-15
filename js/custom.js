@@ -9,6 +9,7 @@ function loadPage(url, hashtag){
             if ($('button').hasClass('active')){
                 $(".hamburger").fire('click');
             }
+            document.getElementById('formulary').reset();
         }
     )
 }
@@ -57,10 +58,11 @@ function contact(){
     loadPage('partials/home.html', 'contact');
     changeNavbarLinks(false);
 }
-function submitRequest(){
+function submitForm(){
     var form = document.getElementById('formulary');
     var headers = { Accept: 'application/json' };
-    $.ajax({url: form.action,
+
+    $.ajax({url: 'https://formspree.io/mdozalpk',
         method: form.method,
         data: form,
         headers: headers
@@ -71,7 +73,7 @@ function submitRequest(){
             window.location.hash="home";
         },
         function(xhr){
-            Metro.infobox.create("<h1>Opss...</h1><p>Alguma coisa deu errada, verifique se você não enviou um formulário vazio ;)</p>", "bg-darkCrimson fg-white");
+            Metro.infobox.create("<h1>Opss...</h1><p>Alguma coisa deu errada, verifique se não faltou preencher mais nada.</p>", "bg-darkCrimson fg-white");
         }
     );
 }
@@ -94,6 +96,13 @@ function changeNavbarLinks(boolean){
         $('#link1').attr('href', '#home');
         $('#link2').attr('href', '#contact');
         $('#link3').attr('href', '#about'); 
+    }
+}
+function formatTelephone(e){
+    var tel = e.value;
+    if (tel.length === 2){
+        document.forms[0].telefone.value = "(" + tel + ") ";
+        return true;
     }
 }
 home();
