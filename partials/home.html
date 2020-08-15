@@ -77,12 +77,12 @@
   </div>
 </div>
 <div class="text-center fadein bg-white pt-10 pb-10">
-  <form class="container" method=POST action=https://formspree.io/mdozalpk id=formulary>
-    <input name=Nome data-role=input data-prepend=Nome class=mb-6>
-    <input name=Email data-role=input data-prepend=Email class=mb-6 type=email>
-    <input name=telefone data-role=input data-prepend=Telefone class=mb-6 type=tel>
-    <textarea name=mensagem data-role=textarea data-auto-size=false placeholder="Sua mensagem..." class=mb-6></textarea>
+  <form class="mw-75-md mx-auto" method="POST" action="javascript:submitForm();" id="formulary">
+    <input required name="Nome" data-role="input" data-prepend="Nome" class="mb-6">
+    <input name="Email" data-role="input" data-prepend="Email" class="mb-6" type="email">
+    <input required name="telefone" data-role="input" data-prepend="Telefone" class="mb-6" type="tel" onkeyup="formatTelephone(this);" maxlength="14" placeholder="(__) _____-____">
+    <textarea required name="mensagem" data-role="textarea" data-auto-size="false" placeholder="Sua mensagem..." class="mb-6"></textarea>
+    <input type="submit" class="dark large drop-shadow" value="Enviar">
+    <input type="reset" class="button large drop-shadow" value="Limpar">
   </form>
-  <a href="javascript:submitRequest();" class="button large dark drop-shadow">Enviar</a>
-  <a href="#home" class="button large drop-shadow">Cancelar</a>
 </div> 
