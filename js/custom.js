@@ -131,11 +131,11 @@ function darkenNavbar(){
 }
 function formatTelephone(e){
     var tel = e.value;
-    if (tel.length === 1){
-        e.value = "(" + tel;
+    if (tel.length === 0){
+        e.value = '(' + tel;
         return true;
     } else if (tel.length === 3){
-        e.value = tel + ") ";
+        e.value = tel + ') ';
         return true;
     } else if (tel.length === 9){
         if (e.value["5"] == "3"){
