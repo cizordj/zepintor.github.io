@@ -1,17 +1,42 @@
-function loadPage(url, hashtag){
-    if (hashtag == null){
-        hashtag = '';
-    }
-    $('main').load(url).then(
+function loadPage(url){
+    return $('main').load(url);
+}
+function home(){
+    document.title = "Pinturas em Indaial | Zé Pintor";
+    loadPage('/partials/home.html').then(
         function(){
-            makeAnimations();
-            location.hash = hashtag;
-            if ($('button').hasClass('active')){
-                $(".hamburger").fire('click');
-            }
-            document.getElementById('formulary').reset();
+            renderPrimaryPage();
         }
     )
+}
+function renderPrimaryPage(){
+    makeAnimations();
+    collapseNavbar();
+    swapNavbarLinks(false);
+    clearHash();
+}
+function makeAnimations(){
+    $('.fadein').fadeIn();
+    window.scrollTo(0,0);
+}
+function collapseNavbar(){
+    if ($('button').hasClass('active')){
+        $(".hamburger").fire('click');
+    }
+}
+function swapNavbarLinks(boolean){
+    if(boolean){
+        $('#link1').attr('href', 'javascript:home();');
+        $('#link2').attr('href', 'javascript:contact();');
+        $('#link3').attr('href', 'javascript:about();');
+    } else if(!boolean) {
+        $('#link1').attr('href', '#home');
+        $('#link2').attr('href', '#contact');
+        $('#link3').attr('href', '#about'); 
+    }
+}
+function clearHash(){
+    window.location.hash='';
 }
 function loadRandomPage(){
     var pages = ["wood", "paintings", "roof", "plaster"];
@@ -19,44 +44,61 @@ function loadRandomPage(){
     var funcName = pages[index];
     Metro.utils.exec(funcName);
 }
-function makeAnimations(){
-    $('.fadein').fadeIn();
-    window.scrollTo(0,0);
-}
-function home(){
-    document.title = "Pinturas em Indaial | Zé Pintor";
-    loadPage('/partials/home.html');
-    changeNavbarLinks(false);
-}
 function wood(){
     document.title = "Zé Pintor | Madeira";
-    loadPage("partials/wood.html");
-    changeNavbarLinks(true);
+    loadPage("partials/wood.html").then(
+        function(){
+            renderSecondaryPage();
+        }
+    )
+}
+function renderSecondaryPage(){
+    makeAnimations();
+    collapseNavbar();
+    swapNavbarLinks(true);
+    clearHash();
 }
 function paintings(){
     document.title = "Zé Pintor | Pinturas";
-    loadPage("partials/paintings.html");
-    changeNavbarLinks(true);
+    loadPage("partials/paintings.html").then(
+        function(){
+            renderSecondaryPage();
+        }
+    )
 }
 function roof(){
     document.title = "Zé Pintor | Telhado";
-    loadPage('partials/roof.html');
-    changeNavbarLinks(true);
+    loadPage('partials/roof.html').then(
+        function(){
+            renderSecondaryPage();
+        }
+    )
 }
 function plaster(){
     document.title = "Zé Pintor | Gesso";
-    loadPage('partials/plaster.html');
-    changeNavbarLinks(true);
+    loadPage('partials/plaster.html').then(
+        function(){
+            renderSecondaryPage();
+        }
+    )
 }
 function about(){
     document.title = "Zé Pintor | Sobre";
-    loadPage("partials/home.html", 'about');
-    changeNavbarLinks(false);
+    loadPage("partials/home.html").then(
+        function(){
+            renderPrimaryPage();
+            location.hash = 'about';
+        }
+    )
 }
 function contact(){
     document.title = "Zé Pintor | Contato";
-    loadPage('partials/home.html', 'contact');
-    changeNavbarLinks(false);
+    loadPage('partials/home.html').then(
+        function(){
+            renderPrimaryPage();
+            location.hash = 'contact';
+        }
+    )
 }
 function submitForm(){
     var form = document.getElementById('formulary');
@@ -87,17 +129,6 @@ function darkenNavbar(){
         $('#navbar').addClass('bg-transparent'); 
     }
 }
-function changeNavbarLinks(boolean){
-    if(boolean){
-        $('#link1').attr('href', 'javascript:home();');
-        $('#link2').attr('href', 'javascript:contact();');
-        $('#link3').attr('href', 'javascript:about();');
-    } else {
-        $('#link1').attr('href', '#home');
-        $('#link2').attr('href', '#contact');
-        $('#link3').attr('href', '#about'); 
-    }
-}
 function formatTelephone(e){
     var tel = e.value;
     if (tel.length === 1){
@@ -120,5 +151,5 @@ function formatTelephone(e){
         return true;
     }
 }
-home();
 $(window).on('scroll', function(){darkenNavbar()});
+makeAnimations();
