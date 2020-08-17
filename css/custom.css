@@ -1,20 +1,10 @@
-@media only screen and (min-width: 576px) {
-    body {
-        background: url("/img/fundo.png") no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
+body{
+    background: linear-gradient(to right, #1b262c , #0f4c75);
+    /* 00b7c2 fdcb9e */
 }
-@media only screen and (max-width: 576px){
-    body {
-        background: url("/img/fundo_celular.png") no-repeat center;
-        background-size: cover;
-    }
-}
-.bg-transparent{ 
-    background-color: transparent !important; 
+
+.bg-gradient{ 
+    background: linear-gradient(to right, #1b262c, #0f4c75);
 }
 .reception{
     height: 100vh;
