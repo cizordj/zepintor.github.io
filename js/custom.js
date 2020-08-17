@@ -100,8 +100,23 @@ function changeNavbarLinks(boolean){
 }
 function formatTelephone(e){
     var tel = e.value;
-    if (tel.length === 2){
-        document.forms[0].telefone.value = "(" + tel + ") ";
+    if (tel.length === 1){
+        e.value = "(" + tel;
+        return true;
+    } else if (tel.length === 3){
+        e.value = tel + ") ";
+        return true;
+    } else if (tel.length === 9){
+        if (e.value["5"] == "3"){
+            e.value = tel + "-";
+            e.maxLength = 14;
+        }
+        return true;
+    } else if (tel.length === 10){
+        if (e.value["5"] == "9"){
+            e.value = tel + "-";
+            e.maxLength = 15;
+        }
         return true;
     }
 }
