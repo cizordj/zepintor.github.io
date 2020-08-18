@@ -128,7 +128,7 @@ function formatTelephone(e){
         e.value = tel + ') ';
         return true;
     } else if (tel.length === 9){
-        if (e.value["5"] == "3"){
+        if (e.value["5"] != "9"){
             e.value = tel + "-";
             e.maxLength = 14;
         }
