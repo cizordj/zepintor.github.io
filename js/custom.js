@@ -141,4 +141,4 @@ function formatTelephone(e){
         return true;
     }
 }
-makeAnimations();
+home();
