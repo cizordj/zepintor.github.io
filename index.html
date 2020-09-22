@@ -27,34 +27,35 @@
     <meta name="metro4:locale" content="pt-BR">
   </head>
   <body>
-    <div data-role="appbar" data-expand-point="md" class="fg-white bg-gradient">
-      <a href="/" class="brand no-hover">
-        <span class="text-leader">Zé Pintor</span>
-      </a>
-      <ul class="app-bar-menu ml-auto">
-        <li><a href="#" id="link1">Início</a></li>
-        <li>
-          <a href="#" class="dropdown-toggle">Serviços</a>
-          <ul class="d-menu" data-role="dropdown">
-            <li><a href="javascript:wood();">Madeira</a></li>
-            <li><a href="javascript:paintings();">Pinturas</a></li>
-            <li><a href="javascript:roof();">Telhado</a></li>
-            <li><a href="javascript:plaster();">Gesso</a></li>
-          </ul>
-        </li>
-        <li><a href="#contact" id="link2">Contato</a></li>
-        <li><a href="#about" id="link3">Sobre</a></li>
-      </ul>
-    </div>
-    <main>
-    </main>
-    <footer class="bg-dark fg-gray p-1 text-center">
-      Cézar Augusto de Campos &#169;&nbsp;<script type="text/javascript">document.write(new Date().getFullYear());</script>
-    </footer>
-    <a href="https://wa.me/5547991673021" target="_blank" class="action-button bg-green fg-white pos-fixed pos-bottom-right mb-6 mr-6 ani-horizontal" rel="noreferrer">
-      <span class="icon mif-whatsapp"></span>
+<div class="container-fluid pos-fixed fixed-top z-top fg-white bg-gradient" id="header">
+  <header class="app-bar container bg-transparent pos-relative" data-role="appbar" data-expand-point="md">
+    <a href="/" class="brand no-hover">
+      <span class="text-leader">Zé Pintor</span>
     </a>
-    <script src="https://cdn.metroui.org.ua/v4.3.10/js/metro.min.js"></script>
-    <script src="/js/custom.js"></script>
+    <ul class="app-bar-menu ml-auto text-upper">
+      <li><a href="/" class="app-bar-item" id="link1">Início</a></li>
+      <li>
+        <a href="#" class="dropdown-toggle">Serviços</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="javascript:wood();">Madeira</a></li>
+          <li><a href="javascript:paintings();">Pinturas</a></li>
+          <li><a href="javascript:roof();">Telhado</a></li>
+          <li><a href="javascript:plaster();">Gesso</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact" id="link2" class="app-bar-item">Contato</a></li>
+      <li><a href="#about" id="link3" class="app-bar-item">Sobre</a></li>
+    </ul>
+  </header>
+</div>
+<main></main>
+<footer class="bg-dark fg-gray p-1 text-center">
+  Cézar Augusto de Campos &#169;&nbsp;<script type="text/javascript">document.write(new Date().getFullYear());</script>
+</footer>
+<a href="https://wa.me/5547991673021" target="_blank" class="action-button bg-green fg-white pos-fixed pos-bottom-right mb-6 mr-6 ani-horizontal" rel="noreferrer">
+  <span class="icon mif-whatsapp"></span>
+</a>
+<script src="https://cdn.metroui.org.ua/v4.3.10/js/metro.min.js"></script>
+<script src="/js/custom.js"></script>
   </body>
 </html> 
