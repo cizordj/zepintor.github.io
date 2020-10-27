@@ -18,3 +18,68 @@ body{
 .dropdown-toggle::before{
     border-color: #ffffff;
 }
+.ani-horizontal,
+.ani-hover-horizontal:hover {
+  -webkit-animation: ani-horizontal 2s ease infinite;
+          animation: ani-horizontal 2s ease infinite;
+}
+@-webkit-keyframes ani-horizontal {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  6% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  12% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  18% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  24% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  30% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  36% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+@keyframes ani-horizontal {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  6% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  12% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  18% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  24% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  30% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  36% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
