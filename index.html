@@ -51,7 +51,97 @@
         </ul>
       </header>
     </div>
-    <main></main>
+    <main>
+      <div class="reception text-center" id="home">
+        <div class="display4 fg-white fadein pos-relative pos-center">
+          <span class="reduce-3 enlarge-1-md">Pinturas em Indaial</span>
+          <h4>Orçamento sem compromisso</h4>
+        </div>
+      </div>
+      <div class="container-fluid fadein text-center bg-white pt-10 pb-10">
+        <div class="container">
+          <div class="feature-table row">
+            <div class=cell-md-4>
+              <div class="info-panel no-overflow shadow-3">
+                <div class="info-panel-header bg-blue fg-white">Capricho</div>
+                <div class=info-panel-content>
+                  <div class="mx-10 my-6">
+                    <span class="mif-hammer mif-8x fg-blue"></span>
+                  </div><span class=text-leader2>Serviços com bom acabamento</span>
+                </div>
+                <div class=info-panel-footer>
+                  <a href="javascript:loadRandomPage();" class="button info large">Mostre-me</a>
+                </div>
+              </div>
+            </div>
+            <div class=cell-md-4>
+              <div class="info-panel no-overflow shadow-3">
+                <div class="info-panel-header bg-steel fg-white">Visão</div>
+                <div class=info-panel-content>
+                  <div class="mx-10 my-6">
+                    <span class="mif-eye mif-8x fg-steel"></span>
+                  </div>
+                  <span class=text-leader2>Boas ideias para cores</span>
+                </div>
+                <div class=info-panel-footer>
+                  <a href="javascript:loadRandomPage();" class="button large secondary">Quero ver</a>
+                </div>
+              </div>
+            </div>
+            <div class=cell-md-4>
+              <div class="info-panel no-overflow shadow-3">
+                <div class="info-panel-header bg-amber fg-white">Nota fiscal</div>
+                <div class=info-panel-content>
+                  <div class="mx-10 my-6">
+                    <span class="mif-barcode mif-8x fg-amber"></span>
+                  </div>
+                  <span class=text-leader2>Para empresas</span>
+                </div>
+                <div class=info-panel-footer>
+                  <a href="#contact" class="button large yellow">Como assim?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reception text-center" id="contact">
+        <div class="display4 fg-white fadein pos-relative pos-center">
+          <span class="reduce-3 enlarge-1-md">Contato</span>
+          <h5>Dúvidas? Deixe uma mensagem.</h5>
+        </div>
+      </div>
+      <div class="text-center fadein bg-white pt-10 pb-10">
+        <form class="mw-75-md mx-auto" method="POST" action="javascript:submitForm();" id="formulary">
+          <input required name="Nome" data-role="input" data-prepend="Nome" class="mb-6">
+          <input name="Email" data-role="input" data-prepend="Email" class="mb-6" type="email">
+          <input required name="telefone" data-role="input" data-prepend="Telefone" class="mb-6" type="tel" onkeypress="formatTelephone(this);" placeholder="(__) _____-____" maxlength="14">
+          <textarea required name="mensagem" data-role="textarea" data-auto-size="false" placeholder="Sua mensagem..." class="mb-6"></textarea>
+          <input type="submit" class="dark large" value="Enviar">
+          <input type="reset" class="button large" value="Limpar">
+        </form>
+      </div>
+      <div class="reception text-center" id="about">
+        <div class="display4 fg-white fadein pos-absolute pos-center">
+          <span class="reduce-3 enlarge-1-md">Sobre mim</span>
+        </div>
+      </div>
+      <div class="container-fluid bg-white pb-1">
+        <div class="container">
+          <div style="top:-130px" class="text-center fadein">
+            <img class="mw-25-md drop-shadow img-thumbnail mx-auto" src=img/perfil.webp alt="Homem segurando um saxofone" loading="lazy">
+            <blockquote>
+              <p class=text-leader>A música é a rainha das artes, a pintura é a princesa.</p>
+              <small>José Augusto de Campos</small>
+            </blockquote>
+          </div>
+          <div class="remark alert fadein" style=top:-130px>
+            <p class="text-just text-leader2">Olá meu nome é José Augusto, sou músico, pai de família e pintor, atuo no ramo há mais de vinte anos e gosto muito do que faço. Você pode me chamar de Zé até porque o pessoal da região sempre me chamou assim.</p>
+          </div>
+        </div>
+      </div>
+
+    </main>
     <footer class="bg-dark fg-gray p-1 text-center">
       Cézar Augusto de Campos &#169;&nbsp;<script type="text/javascript">document.write(new Date().getFullYear());</script>
     </footer>
