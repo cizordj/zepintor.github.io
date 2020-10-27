@@ -3,11 +3,8 @@ function loadPage(url){
 }
 function home(){
     document.title = "Pinturas em Indaial | Zé Pintor";
-    loadPage('/partials/home.html').then(
-        function(){
-            renderPrimaryPage();
-        }
-    )
+    $("main").html(Metro.storage.getItem("home"));
+    renderPrimaryPage();
 }
 function renderPrimaryPage(){
     makeAnimations();
@@ -141,4 +138,5 @@ function formatTelephone(e){
         return true;
     }
 }
-home();
+Metro.storage.setItem('home', $("main").html());
+renderPrimaryPage();
