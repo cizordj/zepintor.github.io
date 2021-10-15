@@ -80,22 +80,14 @@ function plaster(){
     )
 }
 function about(){
+    home();
     document.title = "Zé Pintor | Sobre";
-    loadPage("partials/home.html").then(
-        function(){
-            renderPrimaryPage();
-            location.hash = 'about';
-        }
-    )
+    window.location.hash = 'about';
 }
 function contact(){
+    home();
     document.title = "Zé Pintor | Contato";
-    loadPage('partials/home.html').then(
-        function(){
-            renderPrimaryPage();
-            location.hash = 'contact';
-        }
-    )
+    window.location.hash = 'contact';
 }
 function submitForm(){
     var form = document.getElementById('formulary');
