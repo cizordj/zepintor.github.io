@@ -24,12 +24,10 @@ function collapseNavbar(){
 function swapNavbarLinks(boolean){
     if(boolean){
         $('#link1').attr('href', 'javascript:home();');
-        $('#link2').attr('href', 'javascript:contact();');
-        $('#link3').attr('href', 'javascript:about();');
+        $('#link2').attr('href', 'javascript:about();');
     } else if(!boolean) {
         $('#link1').attr('href', '#home');
-        $('#link2').attr('href', '#contact');
-        $('#link3').attr('href', '#about'); 
+        $('#link2').attr('href', '#about'); 
     }
 }
 function clearHash(){
@@ -83,52 +81,6 @@ function about(){
     home();
     document.title = "Zé Pintor | Sobre";
     window.location.hash = 'about';
-}
-function contact(){
-    home();
-    document.title = "Zé Pintor | Contato";
-    window.location.hash = 'contact';
-}
-function submitForm(){
-    var form = document.getElementById('formulary');
-    var headers = { Accept: 'application/json' };
-
-    $.ajax({url: 'https://formspree.io/mdozalpk',
-        method: form.method,
-        data: form,
-        headers: headers
-    }).then(
-        function(response){
-            Metro.infobox.create("<h1>Pedido enviado com sucesso!</h1><p>A sua solicitação foi efetuada com sucesso, assim que pudermos retornaremos o mais breve possível.</p>", "success");
-            form.reset();
-            window.location.hash="home";
-        },
-        function(xhr){
-            Metro.infobox.create("<h1>Opss...</h1><p>Alguma coisa deu errada, verifique se não faltou preencher mais nada.</p>", "bg-darkCrimson fg-white");
-        }
-    );
-}
-function formatTelephone(e){
-    var tel = e.value;
-    if (tel.length === 0){
-        e.value = '(' + tel;
-        return true;
-    } else if (tel.length === 3){
-        e.value = tel + ') ';
-        return true;
-    } else if (tel.length === 9){
-        if (e.value["5"] != "9"){
-            e.value = tel + "-";
-            e.maxLength = 14;
-        }
-        return true;
-    } else if (tel.length === 10){
-        if (e.value["5"] == "9"){
-            e.value = tel + "-";
-            e.maxLength = 15;
-        }
-        return true;
-    }
 }
 Metro.storage.setItem('home', $("main").html());
 renderPrimaryPage();
