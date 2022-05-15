@@ -1,2 +1,7 @@
-User-agent: *
-Disallow: /img/
+User-Agent: *
+Disallow: /img
+Disallow: /assets
+Disallow: /css
+Disallow: /js
+Disallow: /mif
+Disallow: /partials

@@ -3,39 +3,64 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Zé Pintor | Sobre</title>
-        <meta name="description" content="Gostaria de falar sobre mim aqui, mas o site que você está não me dá mais espaço do que isso.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta property="og:url" content="https://zepintor.github.io/">
+        <meta property="og:title" content="Pinturas em Indaial | Zé Pintor">
+        <meta property="og:description" content="Serviço de pinturas residenciais em Indaial e vale do Itajaí, com ótimas referências.">
+        <meta property="og:type" content="website">
         <meta name="author" content="Cézar Augusto">
-        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="canonical" href="https://zepintor.github.io/contato/" />
-        <link href="../css/main.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Esta página trata sobre a pessoa, o zé pintor.">
+        <meta name="keywords" content="Pintura, parede, residencial, lavação de telhado, massa protec, massa corrida, Indaial, Vale do Itajaí">
+        <title>Zé Pintor | Sobre</title>
+        <link rel="shortcut icon" type="image/png" href="./favicon.png" />
+        <link href="css/metro-all.css" rel="stylesheet" type="text/css"/>
+        <link href="css/schemes/red-alert.css" rel="stylesheet" type="text/css"/>
+        <link rel="canonical" href="https://zepintor.github.io/sobre" />
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top"><a href="../index.html" class="navbar-brand">Zé Pintor</a>
-            <button class="navbar-toggler" data-toggle="collapse" type="button" data-target="#navigationBar"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navigationBar">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a href="../index.html" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="../contato/" class="nav-link">Contato</a></li>
-                    <li class="nav-item active"><a href="index.html" class="nav-link">Sobre</a></li>
-                </ul>
-            </div>
-        </nav>
-        <main class="container bg-dark text-center text-white">
-            <h1>Quem sou eu</h1><img src="../img/perfil.jpg" alt="Foto de um homem tocando saxofone" class="img-thumbnail" style="width: 320px;height: 320px;" />
-            <blockquote class="blockquote">
-                <p class="mb-0">A música é a rainha das artes, a pintura é a princesa.</p>
-                <footer class="blockquote-footer">José Augusto</footer>
-            </blockquote>
-            <br>
-            <h4> Sou músico, pai de família e pintor e atuo no ramo há mais de vinte anos. Amo muito o que faço. No ramo da pintura gosto de ser detalhista e tenho uma profunda paciência para fazer os recortes, embora minha hora renda bastante. </h4>
-            <br>
-            <br>
-        </main>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </body>
+        <div data-role="appbar" data-expand-point="md">
+            <a href="./" class="brand no-hover">
+                <h4>Zé Pintor</h4>
+            </a>
+            <ul class="app-bar-menu">
+                <li><a href="./">Início</a></li>
+                <li><a href="./servicos">Serviços</a></li>
+                <li><a href="./sobre">Sobre</a></li>
+            </ul>
+        </div>
 
+        <main class="text-center">
+            <div class="container-fluid">
+                <h1>Sobre mim</h1>
+                <img class="mw-25 drop-shadow" src="img/perfil.jpg" alt="Homem segurando um saxofone"/>
+                <blockquote>
+                    <p class="text-leader">A música é a rainha das artes, a pintura é a princesa.</p>
+                    <small>José Augusto de Campos</small>
+                </blockquote>
+                <div class="remark dark">
+                <p class="text-just text-leader2">Olá meu nome é José Augusto, sou músico, pai de família e pintor, atuo no ramo há mais de vinte anos e gosto muito do que faço. Você pode me chamar de Zé até porque o pessoal da região sempre me chamou assim.</p>
+                </div>
+            </div>
+        </main>
+
+        <div class="text-center">
+            <button onclick="location = './servicos/';" class="button alert large outline mb-4 mt-4">Confira os meus serviços</button>
+        </div>
+        <button onclick="openInNewTab('https://wa.me/5547991673021');" class="action-button success pos-fixed pos-bottom-right mb-6 mr-6 ani-horizontal whatsapp-button">
+            <span class="icon"><img class="mb-6" src="./assets/whatsapp-32.png" alt="whatsapp icon"></span>
+        </button>
+        <div class="bottom-nav pos-fixed bottom-navigation-bar">
+            <button class="button" onclick="openFormulary();">
+                <span class="icon mif-news"></span>
+                <span class="label">Solicitar orçamento</span>
+            </button>
+            <button class="button" onclick="openInNewTab('https://wa.me/5547991673021');">
+                <span class="icon mif-phone"></span>
+                <span class="label">WhatsApp</span>
+            </button>
+        </div>
+        <script src="js/metro.js" type="text/javascript"></script>
+        <script src="js/default.js" type="text/javascript"></script>
+    </body>
 </html>
