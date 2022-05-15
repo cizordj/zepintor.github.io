@@ -119,16 +119,6 @@ function submitForm(){
         }
     );
 }
-function darkenNavbar(){
-    var height = $(window).height() - 30;
-    if (document.body.scrollTop > height || document.documentElement.scrollTop > height){
-        $('#navbar').removeClass('bg-transparent');
-        $('#navbar').addClass('bg-dark');
-    } else {
-        $('#navbar').removeClass('bg-dark');
-        $('#navbar').addClass('bg-transparent'); 
-    }
-}
 function formatTelephone(e){
     var tel = e.value;
     if (tel.length === 0){
@@ -151,5 +141,4 @@ function formatTelephone(e){
         return true;
     }
 }
-$(window).on('scroll', function(){darkenNavbar()});
 makeAnimations();
