@@ -82,5 +82,13 @@ function about(){
     document.title = "Zé Pintor | Sobre";
     window.location.hash = 'about';
 }
+function showBillOfSaleDialog() {
+  Metro.dialog.create({
+    title: "Sobre emissão de nota fiscal",
+    content: "<p>Emitimos nota fiscal de mão de obra para empresas prestarem suas contas, em nome de pessoa física. "+
+    "Sinta-se livre para buscar mais informações através do WhatsApp no botão ao lado.</p>",
+    closeButton: true
+  });
+}
 Metro.storage.setItem('home', $("main").html());
 renderPrimaryPage();
