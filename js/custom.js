@@ -41,12 +41,9 @@ function loadRandomPage(){
 }
 function wood(){
     document.title = "Zé Pintor | Madeira";
-    loadPage("partials/wood.html").then(
-        function(){
-            renderSecondaryPage();
-        }
-    )
+    loadPage("partials/wood.html").then(renderSecondaryPage);
 }
+
 function renderSecondaryPage(){
     makeAnimations();
     collapseNavbar();
@@ -55,27 +52,15 @@ function renderSecondaryPage(){
 }
 function paintings(){
     document.title = "Zé Pintor | Pinturas";
-    loadPage("partials/paintings.html").then(
-        function(){
-            renderSecondaryPage();
-        }
-    )
+    loadPage("partials/paintings.html").then(renderSecondaryPage);
 }
 function roof(){
     document.title = "Zé Pintor | Telhado";
-    loadPage('partials/roof.html').then(
-        function(){
-            renderSecondaryPage();
-        }
-    )
+    loadPage('partials/roof.html').then(renderSecondaryPage);
 }
 function plaster(){
     document.title = "Zé Pintor | Gesso";
-    loadPage('partials/plaster.html').then(
-        function(){
-            renderSecondaryPage();
-        }
-    )
+    loadPage('partials/plaster.html').then(renderSecondaryPage);
 }
 function about(){
     home();
