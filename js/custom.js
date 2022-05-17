@@ -37,29 +37,35 @@ function loadRandomPage(){
     var pages = ["wood", "paintings", "roof", "plaster"];
     var index = Math.floor(Math.random() * 4);
     var funcName = pages[index];
-    Metro.utils.exec(funcName);
-}
-function wood(){
-    document.title = "Zé Pintor | Madeira";
-    loadPage("partials/wood.html").then(renderSecondaryPage);
+    const isTheSamePage =
+        window.location.hash === '#' + pages[index];
+    isTheSamePage ? loadRandomPage() : Metro.utils.exec(funcName);
 }
 
 function renderSecondaryPage(){
     makeAnimations();
     collapseNavbar();
     swapNavbarLinks(true);
-    clearHash();
+}
+
+function wood(){
+    document.title = "Zé Pintor | Madeira";
+    window.location.hash='wood';
+    loadPage("partials/wood.html").then(renderSecondaryPage);
 }
 function paintings(){
     document.title = "Zé Pintor | Pinturas";
+    window.location.hash='paintings';
     loadPage("partials/paintings.html").then(renderSecondaryPage);
 }
 function roof(){
     document.title = "Zé Pintor | Telhado";
+    window.location.hash='roof';
     loadPage('partials/roof.html').then(renderSecondaryPage);
 }
 function plaster(){
     document.title = "Zé Pintor | Gesso";
+    window.location.hash='plaster';
     loadPage('partials/plaster.html').then(renderSecondaryPage);
 }
 function about(){
