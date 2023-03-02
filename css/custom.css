@@ -3,6 +3,10 @@ body{
     /* 00b7c2 fdcb9e */
 }
 
+.hamburger.dark .line, .nav-button.dark .line {
+    background-color: white;
+}
+
 .bg-gradient{ 
     background: linear-gradient(to right, #1b262c, #0f4c75);
 }
